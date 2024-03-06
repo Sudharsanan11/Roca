@@ -1,0 +1,132 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{case_code}-{MM}-{YYYY}-{###}",
+ "creation": "2024-02-15 12:37:59.706202",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "case_code",
+  "case_category",
+  "case_state",
+  "case_status",
+  "date",
+  "hearing_date",
+  "column_break_qypm",
+  "victim_name",
+  "opposition_name",
+  "customer_name",
+  "case_stage",
+  "case_stage_description",
+  "section_break_poch",
+  "case_description",
+  "conclusion"
+ ],
+ "fields": [
+  {
+   "fieldname": "case_state",
+   "fieldtype": "Dynamic Link",
+   "label": "Case State",
+   "options": "case_category"
+  },
+  {
+   "fieldname": "case_status",
+   "fieldtype": "Select",
+   "label": "Case Status",
+   "options": "Open\nClosed"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "case_description",
+   "fieldtype": "Long Text",
+   "label": "Case Description"
+  },
+  {
+   "fieldname": "hearing_date",
+   "fieldtype": "Date",
+   "label": "Hearing Date"
+  },
+  {
+   "fieldname": "case_category",
+   "fieldtype": "Select",
+   "label": "Case Category",
+   "options": "Tax"
+  },
+  {
+   "fieldname": "column_break_qypm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_poch",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "conclusion",
+   "fieldtype": "Small Text",
+   "label": "Conclusion"
+  },
+  {
+   "fieldname": "case_stage",
+   "fieldtype": "Select",
+   "label": "Case Stage",
+   "options": "\nShow cause notice\nNotice reply\nDemand\nAppeal\nOrder"
+  },
+  {
+   "depends_on": "case_stage",
+   "fieldname": "case_stage_description",
+   "fieldtype": "Small Text",
+   "label": "Case Stage Description"
+  },
+  {
+   "fieldname": "victim_name",
+   "fieldtype": "Data",
+   "label": "Victim Name"
+  },
+  {
+   "fieldname": "opposition_name",
+   "fieldtype": "Data",
+   "label": "Opposition Name"
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Link",
+   "label": "Customer Name",
+   "options": "Customer Details"
+  },
+  {
+   "fieldname": "case_code",
+   "fieldtype": "Link",
+   "label": "Case Code",
+   "options": "Case Codes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-02-29 16:06:00.515078",
+ "modified_by": "Administrator",
+ "module": "Roca",
+ "name": "Case Details",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
